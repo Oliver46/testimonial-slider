@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider</title>
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Youtube source -->
+    <!-- https://www.youtube.com/watch?v=UCKouFbi2Ck -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="slide-container active">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="https://images.pexels.com/photos/2853592/pexels-photo-2853592.jpeg" alt="">
+                    <div class="user-info"></div>
+                    <h3>John Deo</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, saepe cum ullam eos enim iste natus ut dignissimos aliquid maiores ratione veritatis recusandae exercitationem officiis fuga quaerat ipsam sint molestias.</p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="https://images.pexels.com/photos/7656336/pexels-photo-7656336.jpeg" alt="">
+                    <div class="user-info"></div>
+                    <h3>Jennifer Deo</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, saepe cum ullam eos enim iste natus ut dignissimos aliquid maiores ratione veritatis recusandae exercitationem officiis fuga quaerat ipsam sint molestias.</p>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="https://images.pexels.com/photos/762080/pexels-photo-762080.jpeg" alt="">
+                    <div class="user-info"></div>
+                    <h3>Andrea Deo</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, saepe cum ullam eos enim iste natus ut dignissimos aliquid maiores ratione veritatis recusandae exercitationem officiis fuga quaerat ipsam sint molestias.</p>
+            </div>
+        </div>
+
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+
+    </div>
+    <script>
+        let slides = document.querySelectorAll(".slide-container");
+        let index = 0;
+        console.log(slides);
+
+        function next(){
+            slides[index].classList.remove('active');
+            index = (index + 1 ) % slides.length;
+            console.log(index);
+            slides[index].classList.add('active');
+        }
+
+        function prev(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
