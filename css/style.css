@@ -106,3 +106,16 @@ body {
     background: #333;
     color: #FFF;
 }
+
+@media(max-width:600px){
+    .container #next,
+    .container #prev {
+        top: 110% !important;
+    }
+    .container #next{
+        right: 150px;
+    }
+    .container #prev{
+        left: 150px;
+    }
+}
